@@ -50,6 +50,8 @@ The current ESP32 firmware advertises a Bluetooth-enabled device with the name "
   - sel0 (8520A) ➡️ sel1 (A500 MB)
   - sel1 (8520A) ➡️ sel0 (A500 MB)
 
+Feel free to change how the firmware handles switching, so it suits to your configuration 😉.
+
 # Pictures of the ESP32 implementation
 Here are a few images of the final prototype on my A500:
 
