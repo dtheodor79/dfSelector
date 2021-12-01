@@ -16,7 +16,7 @@ The image below shows a WDF 3D model that is implemented with an ESP32 MCU, whic
 
 ![concept](/images/df_selector_3d_model.png)
 
-A voltage convertor between 3.3V and 5V is used to allow communication between the ESP32 (3.3V) and the 8520A (5V). In addition, since the WDF is placed above the floppy ribbon cable connector of the A500, it uses long pin headers (such as the one below) to connect to the A500 MB:
+A voltage convertor between 3.3V and 5V is used to allow communication between the ESP32 (3.3V) and the 8520A (5V). In addition, since the WDF is placed above the floppy ribbon cable connector of the A500, it requires long pin headers (such as the one below) to connect to the A500 MB:
 
 ![concept](/images/long_pin_headers.jpg)
 
