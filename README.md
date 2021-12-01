@@ -42,11 +42,13 @@ The current ESP32 firmware advertises a Bluetooth-enabled device with the name "
 * Power-up again, and now the A500 should boot from DF0.
 
 # Important notes
-- All tests were done with a modified PC-floppy as DF0 and a Gotek emulator as DF1.
-- When DF0 is selected, the current firmware simply forwards sel0 and sel1 from 8520A to the A500 MB.
-- When DF1 is selected, the current firmware forces sel0 to HIGH, i.e. internal drive is disabled.
-- Feel free to change the firmware
-- During tests, there were cases where when DF0 was toggled, the first time disk read was failing. A simple reset fixed it 😉.
+- All tests were done with a modified PC-floppy as DF0 and a Gotek emulator as DF1 (but jumper set to S0).
+- When DF0 is selected, the current firmware forwards 
+  - sel0 (8520A) ➡️ sel0 (A500 MB)
+  - sel1 (A500 MB) ➡️ HIGH
+- When DF1 is selected, the current firmware forwards 
+  - sel0 (8520A) ➡️ sel1 (A500 MB)
+  - sel1 (8520A) ➡️ sel0 (A500 MB)
 
 # Pictures of the ESP32 implementation
 Here are a few images of the final prototype on my A500:
