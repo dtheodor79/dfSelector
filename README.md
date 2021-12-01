@@ -1,5 +1,5 @@
 # Bluetoot DF selector
- The Bluetooth DF (BDF) selector allows users to boot your Amiga 500 from an internal or external drive. Instead of using a mechanical switch or multiple reset sequences to toggle between DF0 and DF1, BDF can be configured wirelessly over a Bluetooth connection. 
+ The Bluetooth DF (BDF) selector allows users to boot your Amiga 500 from an internal or external drive. Instead of using a mechanical switch or multiple reset sequences to toggle between DF0 and DF1, BDF can be configured over a wireless connection. 
  
 # Why bother when there are already other DF selectors?
 Well, all this started because I don't like modifying my A500's precious case (like installing a switch) 🙂. Also, I find more elegant using wireless commands to toggle between DF0 and DF1, than multiple resets 😎.
