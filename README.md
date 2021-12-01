@@ -26,7 +26,7 @@ The current ESP32 firmware advertises a Bluetooth-enabled device with the name "
 ## Toggle DF1 as bootable:
 
 * Make sure that there is no disk in DF0.
-* Power-up the A500 and wait for few secs (e.g. 10 would be enough).
+* Power-up the A500 and wait for few secs (e.g. 5).
 * Scan for the "A500 DF Selector" device, and when found, connect to it.
 * Send "df1".
 * Power-down the A500 for a few secs.
@@ -35,7 +35,7 @@ The current ESP32 firmware advertises a Bluetooth-enabled device with the name "
 ## Toggle DF0 as bootable:
 
 * Make sure that there is no disk (or adf image that will boot) in DF1.
-* Power-up the A500 and wait for few secs (e.g. 10 would be enough).
+* Power-up the A500 and wait for few secs (e.g. 5).
 * Scan for the "A500 DF Selector" device, and when found, connect to it.
 * Send "df0".
 * Power-down the A500 for a few secs.
