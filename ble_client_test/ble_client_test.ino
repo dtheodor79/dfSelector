@@ -18,7 +18,7 @@ static boolean connected = false;
 static boolean doScan = false;
 static BLERemoteCharacteristic* pRemoteCharacteristic;
 static BLEAdvertisedDevice* myDevice;
-String newValue = "";
+String newValue = "", commandToSend = "";
 #define BT_REMOTE_DEVICE_NAME "A500 DF Selector"
 
 static void notifyCallback(
@@ -99,8 +99,8 @@ class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
    * Called for each advertising BLE server.
    */
   void onResult(BLEAdvertisedDevice advertisedDevice) {
-    Serial.print("BLE Advertised Device found: ");
-    Serial.println(advertisedDevice.getName().c_str());    
+    Serial.print("...");
+    //Serial.println(advertisedDevice.getName().c_str());    
 
     // We have found a device, let us now see if it contains the service we are looking for.
     if (String(advertisedDevice.getName().c_str()).equals(BT_REMOTE_DEVICE_NAME)) {
@@ -152,9 +152,10 @@ void loop() {
   if (connected) {
     while (Serial.available() > 0) {      
       newValue = Serial.readString();
-      Serial.println("newValue = " + newValue);
+      commandToSend = newValue.substring(0,3);
+      Serial.println("commandToSend = " + commandToSend);      
       // Set the characteristic's value to be the array of bytes that is actually a string.
-      pRemoteCharacteristic->writeValue(newValue.c_str(), newValue.length());
+      pRemoteCharacteristic->writeValue(commandToSend.c_str(), newValue.length());
     }
   }
   else if(doScan){
