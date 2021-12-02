@@ -53,11 +53,22 @@ The current ESP32 firmware advertises a Bluetooth-enabled device with the name "
 Feel free to change how the firmware handles switching, so it suits to your configuration 😉.
 
 # Pictures of the ESP32 implementation
-Here are a few images of the final prototype on my A500:
+Here are a few images of the final prototype on my A500.
+
+WDF mounted above the floppy ribbon cable connector:
 
 ![concept](/images/image1.jpg)
+
+Loading Cannon Fodder from the Gotek emulator as DF1:
+
 ![concept](/images/image2.jpg)
+
+Another view of the WDF mounted above the floppy ribbon cable connector:
+
 ![concept](/images/image3.jpg)
+
+Gotek emulator connected externally:
+
 ![concept](/images/image4.jpg)
 
 Hope you find it useful!! 😎
