@@ -16,7 +16,7 @@ The image below shows a WDF 3D model that is implemented with an ESP32 MCU, whic
 
 ![concept](/images/df_selector_3d_model.png)
 
-A voltage convertor between 3.3V and 5V is used to allow communication between the ESP32 (3.3V) and the 8520A (5V). In addition, since the WDF in placed above the floppy ribbon cable connector of the A500, it uses long pin headers (such as the one below) to connect to the A500 MB:
+A voltage convertor between 3.3V and 5V is used to allow communication between the ESP32 (3.3V) and the 8520A (5V). In addition, since the WDF is placed above the floppy ribbon cable connector of the A500, it requires long pin headers (such as the one below) to connect to the A500 MB:
 
 ![concept](/images/long_pin_headers.jpg)
 
@@ -26,7 +26,7 @@ The current ESP32 firmware advertises a Bluetooth-enabled device with the name "
 ## Toggle DF1 as bootable:
 
 * Make sure that there is no disk in DF0.
-* Power-up the A500 and wait for few secs (e.g. 10 would be enough).
+* Power-up the A500 and wait for few secs (e.g. 5).
 * Scan for the "A500 DF Selector" device, and when found, connect to it.
 * Send "df1".
 * Power-down the A500 for a few secs.
@@ -35,29 +35,40 @@ The current ESP32 firmware advertises a Bluetooth-enabled device with the name "
 ## Toggle DF0 as bootable:
 
 * Make sure that there is no disk (or adf image that will boot) in DF1.
-* Power-up the A500 and wait for few secs (e.g. 10 would be enough).
+* Power-up the A500 and wait for few secs (e.g. 5).
 * Scan for the "A500 DF Selector" device, and when found, connect to it.
 * Send "df0".
 * Power-down the A500 for a few secs.
 * Power-up again, and now the A500 should boot from DF0.
 
 # Important notes
-- All tests were done with a modified PC-floppy as DF0 and a Gotek emulator as DF1 (but jumper set to S0).
-- When DF0 is selected, the current firmware forwards 
-  - sel0 (8520A) ➡️ sel0 (A500 MB)
-  - sel1 (A500 MB) ➡️ HIGH
-- When DF1 is selected, the current firmware forwards 
-  - sel0 (8520A) ➡️ sel1 (A500 MB)
-  - sel1 (8520A) ➡️ sel0 (A500 MB)
+- All tests were done with a modified PC-floppy as DF0 and a Gotek emulator as DF1 (but jumper set to S0). Actually, in this configuration, floppy selection could be done seamlessly without even restarting the A500 💣 (not recommended though). 
+- When DF0 is selected, the current firmware  
+  - forwards sel0 (8520A) ➡️ sel0 (A500 MB)
+  - sets sel1 (A500 MB) ➡️ HIGH
+- When DF1 is selected, the current firmware  
+  - forwards sel0 (8520A) ➡️ sel1 (A500 MB)
+  - forwards sel1 (8520A) ➡️ sel0 (A500 MB)
 
 Feel free to change how the firmware handles switching, so it suits to your configuration 😉.
 
 # Pictures of the ESP32 implementation
-Here are a few images of the final prototype on my A500:
+Here are a few images of the final prototype on my A500.
+
+WDF mounted above the floppy ribbon cable connector:
 
 ![concept](/images/image1.jpg)
+
+Loading Cannon Fodder from the Gotek emulator as DF1:
+
 ![concept](/images/image2.jpg)
+
+Another view of the WDF mounted above the floppy ribbon cable connector:
+
 ![concept](/images/image3.jpg)
+
+Gotek emulator connected externally:
+
 ![concept](/images/image4.jpg)
 
 Hope you find it useful!! 😎
