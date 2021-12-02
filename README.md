@@ -42,13 +42,13 @@ The current ESP32 firmware advertises a Bluetooth-enabled device with the name "
 * Power-up again, and now the A500 should boot from DF0.
 
 # Important notes
-- All tests were done with a modified PC-floppy as DF0 and a Gotek emulator as DF1 (but jumper set to S0).
-- When DF0 is selected, the current firmware forwards 
-  - sel0 (8520A) ➡️ sel0 (A500 MB)
-  - sel1 (A500 MB) ➡️ HIGH
-- When DF1 is selected, the current firmware forwards 
-  - sel0 (8520A) ➡️ sel1 (A500 MB)
-  - sel1 (8520A) ➡️ sel0 (A500 MB)
+- All tests were done with a modified PC-floppy as DF0 and a Gotek emulator as DF1 (but jumper set to S0). Actually, in this configuration floppy selection could be done seamlessly without even restarting the A500 💣. 
+- When DF0 is selected, the current firmware  
+  - forwards sel0 (8520A) ➡️ sel0 (A500 MB)
+  - sets sel1 (A500 MB) ➡️ HIGH
+- When DF1 is selected, the current firmware  
+  - forwards sel0 (8520A) ➡️ sel1 (A500 MB)
+  - forwards sel1 (8520A) ➡️ sel0 (A500 MB)
 
 Feel free to change how the firmware handles switching, so it suits to your configuration 😉.
 
