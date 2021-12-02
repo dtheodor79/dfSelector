@@ -22,7 +22,7 @@ ESP32 "behind" 8520A:
 
 ![concept](/images/df_selector_inverted_3d_model.png)
 
-A voltage convertor between 3.3V and 5V is used to allow communication between the ESP32 (3.3V) and the 8520A (5V). In addition, since the WDF is placed above the floppy ribbon cable connector of the A500, it requires long pin headers (such as the one below) to connect to the A500 MB:
+A voltage convertor between 3.3V and 5V is used to allow communication between the ESP32 (3.3V) and the 8520A (5V). In addition, since the first WDF version (ESP32 "in front" of 8520A) is placed above the floppy ribbon cable connector of the A500, it requires long pin headers (such as the one below) to connect to the A500 MB:
 
 ![concept](/images/long_pin_headers.jpg)
 
