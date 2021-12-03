@@ -9,7 +9,7 @@ The WDF concept is illustrated below:
 
 ![concept](/images/concept.png)
 
-Pins 13 (sel0) and 14 (sel1) from 8520A (even CIA) are connected to an MCU with wireless connection capability. Users can configure from an exteneral device how these signals are forwarded to the A500 motherboard (MB), in order to select from which floppy drive the computer shall boot. 
+Pins 13 (sel0) and 14 (sel1) from 8520A (even CIA) are connected to an MCU with wireless connection capability. Users can configure from an external device how these signals are forwarded to the A500 motherboard (MB), in order to select from which floppy drive the computer shall boot. 
 
 # Implementation
 The images below show three WDF 3D models that are implemented with an ESP32 MCU, enabling switch configuration over Bluetooth connections:
