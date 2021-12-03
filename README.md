@@ -1,5 +1,5 @@
 # Wireless DF selector
- The Wireless DF (WDF) selector allows users to boot your Amiga 500 from an internal or external drive. Instead of using a mechanical switch or multiple reset sequences to toggle between DF0 and DF1, WDF can be configured over a wireless connection. 
+ The Wireless DF (WDF) selector allows users to boot an Amiga 500 from an internal or external drive. Instead of using a mechanical switch or multiple reset sequences to toggle between DF0 and DF1, WDF can be configured over a wireless connection. 
  
 # Why bother?
 Well, all this started because I don't like modifying my A500's precious case (like drilling to install a switch) 🙂. Also, I find more elegant using wireless commands to toggle between DF0 and DF1, than multiple resets 😎.
@@ -9,18 +9,25 @@ The WDF concept is illustrated below:
 
 ![concept](/images/concept.png)
 
-Pins 13 (sel0) and 14 (sel1) from 8520A (even CIA) are connected to an MCU with wireless connection capability. Users can configure from an exteneral device how these signals are forwarded to the A500 motherboard (MB), in order to select from which floppy drive the computer shall boot. 
+Pins 13 (sel0) and 14 (sel1) from 8520A (even CIA) are connected to an MCU with wireless connection capability. Users can configure from an external device how these signals are forwarded to the A500 motherboard (MB), in order to select from which floppy drive the computer shall boot. 
+
+# Demo video
+[![Watch the video](https://img.youtube.com/vi/IKIUbYo_S1U/maxresdefault.jpg)](https://youtu.be/IKIUbYo_S1U) 
 
 # Implementation
-The images below show two WDF 3D models that are implemented with an ESP32 MCU, enabling switch configuration over Bluetooth connections:
+The images below show three WDF 3D models that are implemented with an ESP32 MCU, enabling switch configuration over Bluetooth connections:
 
-ESP32 "in front" of 8520A:
+ESP32 "in front" of 8520A (click [here](https://www.pcbway.com/project/shareproject/Amiga_500_Wireless_DF_selector.html) to build one):
 
 ![concept](/images/df_selector_3d_model.png)
 
 ESP32 "behind" 8520A:
 
 ![concept](/images/df_selector_inverted_3d_model.png)
+
+ESP32 "stacked" on top of 8520A (click [here](https://www.pcbway.com/project/shareproject/Amiga_500_compact_wireless_DF_selector.html) to build one):
+
+![concept](/images/df_selector_stacked_3d_model.png)
 
 A voltage convertor between 3.3V and 5V is used to allow communication between the ESP32 (3.3V) and the 8520A (5V). In addition, since the first WDF version (ESP32 "in front" of 8520A) is placed above the floppy ribbon cable connector of the A500, it requires long pin headers (such as the one below) to connect to the A500 MB:
 
@@ -48,7 +55,7 @@ The current ESP32 firmware advertises a Bluetooth-enabled device with the name "
 * Power-up again, and now the A500 should boot from DF0.
 
 # Important notes
-- All tests were done with a modified PC-floppy as DF0 and a Gotek emulator as DF1 (but jumper set to S0). Actually, in this configuration, floppy selection could be done seamlessly without even restarting the A500 💣 (not recommended though). 
+- All tests were carried out with a modified PC-floppy as DF0 and a Gotek emulator as DF1 (but jumper set to S0). As you can see in the demo video above, floppy selection could be done seamlessly without even restarting the A500 💣 by sending "df0" and "df1" commands when there was no floppy access. If you would like to try it, please be careful and always make sure that before sending any command that there is no floppy access (don't blame me if there is any damage though 😛). 
 - When DF0 is selected, the current firmware  
   - forwards sel0 (8520A) ➡️ sel0 (A500 MB)
   - sets sel1 (A500 MB) ➡️ HIGH
@@ -76,5 +83,6 @@ Another view of the WDF mounted above the floppy ribbon cable connector:
 Gotek emulator connected externally:
 
 ![concept](/images/image4.jpg)
+
 
 Hope you find it useful!! 😎
