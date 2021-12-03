@@ -14,7 +14,7 @@ Pins 13 (sel0) and 14 (sel1) from 8520A (even CIA) are connected to an MCU with 
 # Implementation
 The images below show three WDF 3D models that are implemented with an ESP32 MCU, enabling switch configuration over Bluetooth connections:
 
-ESP32 "in front" of 8520A (tested):
+ESP32 "in front" of 8520A (tested, click [here](https://www.pcbway.com/project/shareproject/Amiga_500_Wireless_DF_selector.html) to order one!):
 
 ![concept](/images/df_selector_3d_model.png)
 
@@ -81,7 +81,5 @@ Gotek emulator connected externally:
 
 ![concept](/images/image4.jpg)
 
-
-Click [here](https://www.pcbway.com/project/shareproject/Amiga_500_Wireless_DF_selector.html) to order one!
 
 Hope you find it useful!! 😎
