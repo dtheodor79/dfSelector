@@ -755,7 +755,7 @@
   (gr_line (start 203 119) (end 150 119) (layer Edge.Cuts) (width 0.05))
   (gr_arc (start 203 118) (end 203 119) (angle -90) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 204 83) (end 204 118) (layer Edge.Cuts) (width 0.05))
-  (gr_text "A500 boot disk \nwireless selector" (at 193 109) (layer F.SilkS) (tstamp 61A9C2F5)
+  (gr_text "A500 boot disk \nwireless selector" (at 193 111) (layer F.SilkS) (tstamp 61A9C2F5)
     (effects (font (size 1 1) (thickness 0.15)))
   )
 
