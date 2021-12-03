@@ -11,10 +11,14 @@ The WDF concept is illustrated below:
 
 Pins 13 (sel0) and 14 (sel1) from 8520A (even CIA) are connected to an MCU with wireless connection capability. Users can configure from an external device how these signals are forwarded to the A500 motherboard (MB), in order to select from which floppy drive the computer shall boot. 
 
+# Demo video
+ 
+[![Click here to watch a WDF demo video.](https://img.youtube.com/vi/IKIUbYo_S1U/maxresdefault.jpg)](https://youtu.be/IKIUbYo_S1U)
+
 # Implementation
 The images below show three WDF 3D models that are implemented with an ESP32 MCU, enabling switch configuration over Bluetooth connections:
 
-ESP32 "in front" of 8520A (tested, click [here](https://www.pcbway.com/project/shareproject/Amiga_500_Wireless_DF_selector.html) to order one!):
+ESP32 "in front" of 8520A (tested, click 
 
 ![concept](/images/df_selector_3d_model.png)
 
