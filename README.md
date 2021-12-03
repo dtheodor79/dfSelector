@@ -12,15 +12,19 @@ The WDF concept is illustrated below:
 Pins 13 (sel0) and 14 (sel1) from 8520A (even CIA) are connected to an MCU with wireless connection capability. Users can configure from an exteneral device how these signals are forwarded to the A500 motherboard (MB), in order to select from which floppy drive the computer shall boot. 
 
 # Implementation
-The images below show two WDF 3D models that are implemented with an ESP32 MCU, enabling switch configuration over Bluetooth connections:
+The images below show three WDF 3D models that are implemented with an ESP32 MCU, enabling switch configuration over Bluetooth connections:
 
-ESP32 "in front" of 8520A:
+ESP32 "in front" of 8520A (tested):
 
 ![concept](/images/df_selector_3d_model.png)
 
-ESP32 "behind" 8520A:
+ESP32 "behind" 8520A (not tested):
 
 ![concept](/images/df_selector_inverted_3d_model.png)
+
+ESP32 "stacked" on top of 8520A (not tested):
+
+![concept](/images/df_selector_stacked_3d_model.png)
 
 A voltage convertor between 3.3V and 5V is used to allow communication between the ESP32 (3.3V) and the 8520A (5V). In addition, since the first WDF version (ESP32 "in front" of 8520A) is placed above the floppy ribbon cable connector of the A500, it requires long pin headers (such as the one below) to connect to the A500 MB:
 
