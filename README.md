@@ -1,5 +1,5 @@
 # Wireless DF selector
- The Wireless DF (WDF) selector allows users to boot your Amiga 500 from an internal or external drive. Instead of using a mechanical switch or multiple reset sequences to toggle between DF0 and DF1, WDF can be configured over a wireless connection. 
+ The Wireless DF (WDF) selector allows users to boot an Amiga 500 from an internal or external drive. Instead of using a mechanical switch or multiple reset sequences to toggle between DF0 and DF1, WDF can be configured over a wireless connection. 
  
 # Why bother?
 Well, all this started because I don't like modifying my A500's precious case (like drilling to install a switch) 🙂. Also, I find more elegant using wireless commands to toggle between DF0 and DF1, than multiple resets 😎.
