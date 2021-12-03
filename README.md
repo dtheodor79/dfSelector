@@ -25,7 +25,7 @@ ESP32 "behind" 8520A:
 
 ![concept](/images/df_selector_inverted_3d_model.png)
 
-ESP32 "stacked" on top of 8520A:
+ESP32 "stacked" on top of 8520A (click [here](https://www.pcbway.com/project/shareproject/Amiga_500_compact_wireless_DF_selector.html) to build one):
 
 ![concept](/images/df_selector_stacked_3d_model.png)
 
