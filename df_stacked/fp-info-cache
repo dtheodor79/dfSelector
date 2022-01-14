@@ -1,4 +1,4 @@
-18665763679967501
+18662521840752906
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -82067,13 +82067,6 @@ dil24
 0
 24
 24
-esp32_d1_mini
-ESP32_mini
-
-
-0
-40
-40
 ky040_rotary_encoder
 ky040_rotary_encoder
 Through hole straight pin header, 1x05, 2.54mm pitch, single row
@@ -82087,14 +82080,7 @@ Through hole straight pin header, 1x06, 2.54mm pitch, single row
 Through hole pin header THT 1x06 2.54mm single row
 0
 12
-12
-logic_shifter
-dip40_package
-40-lead though-hole mounted DIP package, row spacing 15.24 mm (600 mils)
-THT DIP DIL PDIP 2.54mm 15.24mm 600mil
-0
-40
-40
+6
 oled_128x32
 oled_128x32
 Through hole straight socket strip, 1x04, 2.54mm pitch, single row (from Kicad 4.0.7), script generated
